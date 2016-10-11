@@ -1,0 +1,7 @@
+creds/
+node_modules/
+typings/
+static/bower/
+static/dist/
+.serverless/
+event.json
