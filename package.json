@@ -1,0 +1,41 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@angular/common": "^2.0.0-rc.6",
+    "@angular/compiler": "^2.0.0-rc.6",
+    "@angular/core": "^2.0.0-rc.6",
+    "@angular/forms": "^2.0.0-rc.6",
+    "@angular/http": "^2.0.0-rc.6",
+    "@angular/platform-browser": "^2.0.0-rc.6",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.6",
+    "@angular/router": "^3.0.0-rc.2",
+    "@angular/upgrade": "2.0.0-rc.1",
+    "bootstrap": "^3.3.7",
+    "es6-shim": "^0.35.0",
+    "express": "^4.14.0",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "^5.0.0-beta.12",
+    "zone.js": "^0.6.17"
+  },
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
+}

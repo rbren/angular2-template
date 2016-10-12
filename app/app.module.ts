@@ -7,6 +7,9 @@ import {APP_BASE_HREF} from '@angular/common';
 
 import { appRoutes } from './app.routing';
 import { AppComponent }       from './components/app';
+import { HomeComponent }       from './components/home';
+import { NavbarComponent }       from './components/navbar';
+import { FooterComponent }       from './components/footer';
 
 @NgModule({
   imports: [
@@ -20,6 +23,9 @@ import { AppComponent }       from './components/app';
   ],
   declarations: [
     AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   bootstrap: [ AppComponent ],
 })

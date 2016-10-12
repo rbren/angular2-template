@@ -21,9 +21,6 @@ module.exports = {
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
-    }, {
-      test: /\.(woff2?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "file?name=static/fonts/[name].[ext]"
     }]
   },
   plugins: [
@@ -32,7 +29,6 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       jquery: 'jquery',
-      marked: 'marked',
     }),
     new webpack.optimize.CommonsChunkPlugin("vendor", "./static/dist/vendor.bundle.js", Infinity),
   ]
