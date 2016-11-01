@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "webpack",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "typings install"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.6",
