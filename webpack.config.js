@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const FONT_OPTS = 'name=fonts/[name].[ext]&outputPath=static/dist/';
 module.exports = {
   entry: {
     "vendor": "./app/vendor",
@@ -21,6 +22,18 @@ module.exports = {
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+    }, {
+      test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url?limit=10000&mimetype=application/font-woff&' + FONT_OPTS
+    }, {
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url?limit=10000&mimetype=application/octet-stream&' + FONT_OPTS
+    }, {
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?' + FONT_OPTS
+    }, {
+      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'url?limit=10000&mimetype=image/svg+xml&' + FONT_OPTS
     }]
   },
   plugins: [

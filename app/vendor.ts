@@ -7,3 +7,6 @@ import 'reflect-metadata';
 import 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
 
+// CSS
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
