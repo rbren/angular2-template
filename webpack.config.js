@@ -11,7 +11,7 @@ module.exports = {
     filename: "./static/dist/[name].bundle.js"
   },
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['.js', '.ts']
   },
   devtool: 'source-map',
   module: {
@@ -21,28 +21,28 @@ module.exports = {
       exclude: /node_modules\/(?!ng2-bootstrap)/
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+      loader: ExtractTextPlugin.extract({fallbackLoader: "style-loader", loader: "css-loader"}),
     }, {
       test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/font-woff&' + FONT_OPTS
+      loader: 'url-loader?limit=10000&mimetype=application/font-woff&' + FONT_OPTS
     }, {
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/octet-stream&' + FONT_OPTS
+      loader: 'url-loader?limit=10000&mimetype=application/octet-stream&' + FONT_OPTS
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?' + FONT_OPTS
+      loader: 'file-loader?' + FONT_OPTS
     }, {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=image/svg+xml&' + FONT_OPTS
+      loader: 'url-loader?limit=10000&mimetype=image/svg+xml&' + FONT_OPTS
     }]
   },
   plugins: [
-    new ExtractTextPlugin("./static/dist/[name].css"),
+    new ExtractTextPlugin({filename: "./static/dist/[name].css"}),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       jquery: 'jquery',
     }),
-    new webpack.optimize.CommonsChunkPlugin("vendor", "./static/dist/vendor.bundle.js", Infinity),
+    new webpack.optimize.CommonsChunkPlugin({name: "vendor", filename: "./static/dist/vendor.bundle.js"}),
   ]
 }
