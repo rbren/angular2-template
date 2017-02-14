@@ -1,6 +1,6 @@
 creds/
 node_modules/
 typings/
-static/dist/
+static/
 .serverless/
 event.json

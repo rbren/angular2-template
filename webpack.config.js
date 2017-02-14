@@ -1,14 +1,14 @@
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-const FONT_OPTS = 'name=fonts/[name].[ext]&outputPath=static/dist/';
+const FONT_OPTS = 'name=fonts/[name].[ext]&outputPath=dist/';
 module.exports = {
   entry: {
     "vendor": "./app/vendor",
     "app": "./app/main"
   },
   output: {
-    path: __dirname,
-    filename: "./static/dist/[name].bundle.js"
+    path: __dirname + '/static',
+    filename: "dist/[name].bundle.js"
   },
   resolve: {
     extensions: ['.js', '.ts']
@@ -16,6 +16,12 @@ module.exports = {
   devtool: 'source-map',
   module: {
     loaders: [{
+      test: /\.html$/,
+      loader: 'file-loader?name=[name].[ext]!extract-loader!html-loader?interpolate=true',
+    }, {
+      test: /\.js$/,
+      loader: 'babel-loader?presets[]=es2015',
+    }, {
       test: /\.ts/,
       loaders: ['ts-loader'],
       exclude: /node_modules\/(?!ng2-bootstrap)/
@@ -41,12 +47,12 @@ module.exports = {
     }]
   },
   plugins: [
-    new ExtractTextPlugin({filename: "./static/dist/[name].css"}),
+    new ExtractTextPlugin({filename: "dist/[name].css"}),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       jquery: 'jquery',
     }),
-    new webpack.optimize.CommonsChunkPlugin({name: "vendor", filename: "./static/dist/vendor.bundle.js"}),
+    new webpack.optimize.CommonsChunkPlugin({name: "vendor", filename: "dist/vendor.bundle.js"}),
   ]
 }

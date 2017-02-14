@@ -12,11 +12,6 @@ var server = new WebpackDevServer(compiler, {
     ],
   },
   stats: { colors: true },
-  setup: app => {
-    app.use('/dist', function(req, res) {
-      res.redirect('/static' + req.originalUrl);
-    })
-  },
 });
 server.listen(3000, "0.0.0.0", function() {
 });
