@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "",
+  "description": "I use this template as a starter for any new Angular 2.0 projects.",
   "main": "server.js",
   "scripts": {
     "build": "webpack",
@@ -9,6 +9,18 @@
     "postinstall": "typings install"
   },
   "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0",
+    "pug": "^2.0.0-beta7",
+    "pug-html-loader": "^1.1.0",
+    "pug-plugin-ng": "0.0.2",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.11",
+    "webpack": "^1.13.2",
+    "zone.js": "^0.6.17",
     "@angular/common": "^2.0.0-rc.6",
     "@angular/compiler": "^2.0.0-rc.6",
     "@angular/core": "^2.0.0-rc.6",
@@ -20,18 +32,6 @@
     "@angular/upgrade": "2.0.0-rc.1",
     "bootstrap": "^3.3.7",
     "es6-shim": "^0.35.0",
-    "express": "^4.14.0",
-    "font-awesome": "^4.6.3",
-    "jquery": "^3.1.0",
-    "pug": "^2.0.0-beta7",
-    "pug-html-loader": "^1.1.0",
-    "pug-plugin-ng": "0.0.2",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.11",
-    "webpack": "^2.2.0",
-    "zone.js": "^0.6.17"
-  },
-  "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
@@ -46,7 +46,16 @@
     "typescript": "^1.8.10",
     "typings": "^0.8.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobby-brennan/angular2-template.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bobby-brennan/angular2-template/issues"
+  },
+  "homepage": "https://github.com/bobby-brennan/angular2-template#readme"
 }
