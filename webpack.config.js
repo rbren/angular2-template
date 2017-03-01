@@ -30,8 +30,7 @@ module.exports = {
       loader: ExtractTextPlugin.extract({fallbackLoader: "style-loader", loader: "css-loader"}),
     }, {
       test: /\.pug$/,
-      loader: 'pug-html-loader',
-      query: { doctype: 'html', plugins: ['pug-plugin-ng'] },
+      loader: ['raw-loader', 'pug-html-loader?doctype=html&plugins=pug-plugin-ng'],
     }, {
       test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url-loader?limit=10000&mimetype=application/font-woff&' + FONT_OPTS
