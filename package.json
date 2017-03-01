@@ -19,7 +19,7 @@
     "pug-plugin-ng": "0.0.2",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.11",
-    "webpack": "^1.13.2",
+    "webpack": "^2.2.1",
     "zone.js": "^0.6.17",
     "@angular/common": "^2.0.0-rc.6",
     "@angular/compiler": "^2.0.0-rc.6",
