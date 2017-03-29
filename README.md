@@ -13,7 +13,6 @@ I use this template as a starter for any new Angular 2.0 projects.
 
 ```
 npm install
-typings install
 webpack
 ```
 
