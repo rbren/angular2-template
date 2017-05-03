@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "webpack",
-    "start": "node server.js",
-    "postinstall": "typings install"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.14.0"
