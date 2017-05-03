@@ -12,6 +12,7 @@ var server = new WebpackDevServer(compiler, {
     ],
   },
   stats: { colors: true },
+  disableHostCheck: true,
 });
 server.listen(3000, "0.0.0.0", function() {
 });
