@@ -1,6 +1,6 @@
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-const FONT_OPTS = 'name=fonts/[name].[ext]&outputPath=dist/';
+const FONT_OPTS = 'name=fonts/[name].[ext]&outputPath=dist/&publicPath=../';
 module.exports = {
   entry: {
     "vendor": "./app/vendor",
