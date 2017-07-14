@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -10,18 +10,17 @@
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
     "lib": [
-      "es5",
       "es2015",
-      "es2017",
-      "dom",
-      "scripthost"
+      "dom"
     ]
   },
   "exclude": [
     "node_modules"
   ],
   "types": [
-     "node"
+    "node",
+    "core-js",
+    "es6-shim"
   ],
   "typeRoots": [
     "node_modules/@types"
