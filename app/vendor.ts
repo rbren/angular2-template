@@ -8,6 +8,5 @@ import 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
 
 // CSS
-import './styles/styles.css';
-import 'bootstrap/dist/css/bootstrap.css';
+require('bootstrap-loader');
 import 'font-awesome/css/font-awesome.min.css';
